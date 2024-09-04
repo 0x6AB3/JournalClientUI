@@ -1,0 +1,85 @@
+﻿<UserControl x:Class="NotesApp.NoteDisplay"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NotesApp"
+             mc:Ignorable="d" d:DesignWidth="300
+             " Height="149">
+    <UserControl.Resources>
+        <Style TargetType="Button" x:Key="RoundedButtonStyle">
+            <Setter Property="Background" Value="#FF3C8DBC"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border 
+                                Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="15">
+                                <ContentPresenter 
+                                    HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center" 
+                                    ContentSource="Content"/>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF2A7CB6"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#FF1C5A82"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" Value="Gray"/>
+                                <Setter Property="Foreground" Value="#FFBFBFBF"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <TextBlock x:Name="lblTitle" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="54" Width="290" FontFamily="Dubai" FontSize="22" TextAlignment="Center" Foreground="White"><Run Language="en-gb" Text="[Title]"/></TextBlock>
+        <Button x:Name="btnDeleteNote" Style="{StaticResource RoundedButtonStyle}" Content="🗑️" HorizontalAlignment="Left" Margin="210,59,0,0" Height="80" Width="80" FontSize="36" FontFamily="Dubai Medium" Foreground="Black" Click="btnDeleteNote_Click" VerticalAlignment="Top">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFA21010" Offset="1"/>
+                    <GradientStop Color="#FFC35B5B"/>
+                    <GradientStop Color="#FFB33737" Offset="0.75"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnCloud" Style="{StaticResource RoundedButtonStyle}" Content="☁" Height="80" Width="80" FontSize="36" FontFamily="Dubai Medium" Foreground="Black" AutomationProperties.HelpText="Store note on the cloud (secure online storage)" Click="btnCloud_Click" Margin="0,59,0,0" VerticalAlignment="Top">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF23BDF1"/>
+                    <GradientStop Color="#FF1A61EC" Offset="1"/>
+                    <GradientStop Color="#FF1E93EE" Offset="0.75"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnOpen" Style="{StaticResource RoundedButtonStyle}" Content="👁" Margin="10,59,0,0" Height="80" Width="80" FontSize="36" FontFamily="Dubai Medium" Foreground="Black" AutomationProperties.HelpText="Store note on the cloud (secure online storage)" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnOpen_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF94DC81"/>
+                    <GradientStop Color="#FF10A23A" Offset="1"/>
+                    <GradientStop Color="#FF5BC362" Offset="0.603"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Border BorderBrush="White" BorderThickness="1"/>
+
+    </Grid>
+</UserControl>
