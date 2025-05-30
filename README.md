@@ -1,8 +1,11 @@
 # 🧠 Note Client UI (C# Desktop App)
+
 ![{7204DB0C-B5BC-4869-B835-A104742B480A}](https://github.com/user-attachments/assets/94954d1e-b91d-4df7-84c0-f01cd7c71312)
+
 This is a lightweight encrypted note-taking desktop application built in C#. It connects to a remote server using a custom API and synchronizes encrypted note files. This document describes the UI layout, behavior, encryption model, and known platform-specific issues.
 
 ---
+
 ![{06D9C296-1DCC-45A7-BE90-B4085C28863D}](https://github.com/user-attachments/assets/aa1dc451-ad02-4d72-a97f-54a3144eaba3)
 
 ## 📦 JSON Note Object Structure
@@ -68,6 +71,7 @@ A recent .NET runtime update caused a rendering bug where:
 * Considering a migration to custom rendering or alternative frameworks
 
 ---
+
 ![{5D674AC0-FE72-4A33-B632-642FE992FA73}](https://github.com/user-attachments/assets/5071e547-0e83-4968-8027-55091a48fa2b)
 
 ## 🔐 Encryption Details
@@ -84,6 +88,7 @@ A recent .NET runtime update caused a rendering bug where:
   * `InternalData` stores encrypted content
 
 ---
+
 ![{535F298E-2146-4DE2-A4FB-B6E4663BAC8C}](https://github.com/user-attachments/assets/95208695-2431-4184-8e55-bbf58b04125d)
 
 ## 🗂 Local File Management
@@ -110,6 +115,7 @@ A recent .NET runtime update caused a rendering bug where:
   * Sync and connection status
 
 ---
+
 ![{A9DCFA2F-619E-4E42-892D-56D4A21BA378}](https://github.com/user-attachments/assets/c401e2e7-6f4a-44f3-b472-f6b6ca2e1492)
 
 ## 🧩 Tech Stack
@@ -120,6 +126,7 @@ A recent .NET runtime update caused a rendering bug where:
 * Networking: `HttpClient` with POST/GET API calls
 
 ---
+
 ![{1F827A7A-D66C-47C3-BFAB-B1126FCB06CB}](https://github.com/user-attachments/assets/9834117f-c94d-4a8f-97e9-cdd3038d52b8)
 
 Feel free to open an issue if you run into UI rendering bugs or want to contribute to the project.
