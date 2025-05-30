@@ -91,6 +91,8 @@ A recent .NET runtime update caused a rendering bug where:
 
 ![{535F298E-2146-4DE2-A4FB-B6E4663BAC8C}](https://github.com/user-attachments/assets/95208695-2431-4184-8e55-bbf58b04125d)
 
+![{1F827A7A-D66C-47C3-BFAB-B1126FCB06CB}](https://github.com/user-attachments/assets/9834117f-c94d-4a8f-97e9-cdd3038d52b8)
+
 ## 🗂 Local File Management
 
 * Notes are saved as `<Title>.json` in `/Notes` directory
@@ -126,7 +128,5 @@ A recent .NET runtime update caused a rendering bug where:
 * Networking: `HttpClient` with POST/GET API calls
 
 ---
-
-![{1F827A7A-D66C-47C3-BFAB-B1126FCB06CB}](https://github.com/user-attachments/assets/9834117f-c94d-4a8f-97e9-cdd3038d52b8)
 
 Feel free to open an issue if you run into UI rendering bugs or want to contribute to the project.
