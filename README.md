@@ -61,7 +61,7 @@ Notes are stored and transferred as JSON objects, for example:
 
 A recent .NET runtime update caused a rendering bug where:
 
-* Any line ending in the lowercase letter **"n"** may be cut off or invisible
+* Certain line endings may be cut off or invisible
 * Affects `TextBox` and `RichTextBox` controls
 * Does **not** affect saved files or server communication
 
